@@ -505,19 +505,14 @@ async def TcPChaT(ip, port, AutHToKen, key, iv, LoGinDaTaUncRypTinG, ready_event
 
                                     except Exception as e:
                                         pass
+# Bad: missing closing parenthesis on line 513
+some_variable = get_data(
+def validate_emote(idT):  # Python crashes here
 
+# Good: closed properly
+some_variable = get_data()
+def validate_emote(idT):
 
-                        if inPuTMsG in ("dev"):
-                            uid = response.Data.uid
-                            chat_id = response.Data.Chat_ID
-                            message = '/d <uid1> <uid2>... <emoteid> /f <uid1> <uid2>... <emoteid> for fast emote'                               
-                                        def validate_emote(idT):
-    some_code()
-    err_msg = f"[B][C]{get_random_color()}\nInvalid Emote ID: {idT}!\n"
-                                        P_err = await SEndMsG(response.Data.chat_type, err_msg, uid, chat_id, key, iv)
-                                        await SEndPacKeT(whisper_writer, online_writer, 'ChaT', P_err)
-                                    else:
-                                        try:
                                             await SEndPacKeT(whisper_writer, online_writer, 'ChaT', P)
                                             # ... super fast emote loop ...
 
