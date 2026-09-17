@@ -511,7 +511,9 @@ async def TcPChaT(ip, port, AutHToKen, key, iv, LoGinDaTaUncRypTinG, ready_event
                             uid = response.Data.uid
                             chat_id = response.Data.Chat_ID
                             message = '/d <uid1> <uid2>... <emoteid> /f <uid1> <uid2>... <emoteid> for fast emote'                               
-                                        err_msg = f"[B][C]{get_random_color()}\nInvalid Emote ID: {idT}!\n"
+                                        def validate_emote(idT):
+    some_code()
+    err_msg = f"[B][C]{get_random_color()}\nInvalid Emote ID: {idT}!\n"
                                         P_err = await SEndMsG(response.Data.chat_type, err_msg, uid, chat_id, key, iv)
                                         await SEndPacKeT(whisper_writer, online_writer, 'ChaT', P_err)
                                     else:
